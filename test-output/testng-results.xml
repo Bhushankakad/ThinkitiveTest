@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="20768" started-at="2020-10-25T17:58:47 IST" finished-at="2020-10-25T17:59:07 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="20768" started-at="2020-10-25T17:58:47 IST" finished-at="2020-10-25T17:59:07 IST">
+      <class name="com.thinkitive.ThinkitiveTest.test.TestAssignment2">
+        <test-method status="PASS" signature="openBroser()[pri:0, instance:com.thinkitive.ThinkitiveTest.test.TestAssignment2@71bbf57e]" name="openBroser" is-config="true" duration-ms="11972" started-at="2020-10-25T17:58:47 IST" finished-at="2020-10-25T17:58:59 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBroser -->
+        <test-method status="PASS" signature="test1()[pri:0, instance:com.thinkitive.ThinkitiveTest.test.TestAssignment2@71bbf57e]" name="test1" duration-ms="6844" started-at="2020-10-25T17:58:59 IST" finished-at="2020-10-25T17:59:06 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method status="PASS" signature="getProductWithHighestPrice()[pri:0, instance:com.thinkitive.ThinkitiveTest.test.TestAssignment2@71bbf57e]" name="getProductWithHighestPrice" duration-ms="1917" started-at="2020-10-25T17:59:06 IST" depends-on-methods="com.thinkitive.ThinkitiveTest.test.TestAssignment2.test1" finished-at="2020-10-25T17:59:07 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getProductWithHighestPrice -->
+      </class> <!-- com.thinkitive.ThinkitiveTest.test.TestAssignment2 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
