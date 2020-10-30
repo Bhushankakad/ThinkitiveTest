@@ -5,12 +5,19 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.TreeMap;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -21,12 +28,14 @@ import com.thinkitive.ThinkitiveTest.utilities.Utilities;
 public class TestAssignment2 extends Base {
 	HomePage homepage = null;
 	Utilities utilities = new Utilities();
+	 String pathOfProductfile = System.getProperty("user.dir")
+				+ "\\src\\main\\java\\com\\thinkitive\\ThinkitiveTest\\testdata\\product.txt";
 
 	@BeforeClass
 	public void openBroser() {
 		init();
 		homepage = new HomePage(driver);
-
+		
 	}
 
 	@Test
@@ -37,33 +46,31 @@ public class TestAssignment2 extends Base {
 		// Step 2 :Search with search text
 		homepage.searchElement.sendKeys("hoodies");
 		
-		utilities.waitTill(driver, homepage.selectElementFromDropdown);
-
 		utilities.pressEnterKey(driver);
 
 		utilities.click(homepage.selectElementFromDropdown);
+		
+		driver.navigate().refresh();
 
-		String pathOfProductfile = System.getProperty("user.dir")
-				+ "\\src\\main\\java\\com\\thinkitive\\ThinkitiveTest\\testdata\\product.txt";
-
-		// write the data in file
-		utilities.writeDataInFile(pathOfProductfile, driver);
+		
 
 	}
-
+	
 	@Test(dependsOnMethods = { "testWriteProductInfoInTextFile" })
 	public void getProductWithHighestPrice() {
-
-		List<WebElement> listOfprice = driver.findElements(By.xpath("//div[@id='maindiv']/div/div/div/div[3]/span[1]"));
-		int sizeOfList = listOfprice.size();
-		Float[] arrOfProductPrice = new Float[sizeOfList];
-		for (int i = 0; i < listOfprice.size(); i++) {
-			String price = listOfprice.get(i).getText();
-			System.out.println("price is " + price);
-			arrOfProductPrice[i] = Float.parseFloat(price);
-		}
-		Arrays.parallelSort(arrOfProductPrice);
-		System.out.println("Highest price of product is  :" + arrOfProductPrice[arrOfProductPrice.length - 1]);
+		
+        // Storing and retriving product info thrugh tree map
+		TreeMap<Float,List<String>> infoOfProductHavingHighestValue=utilities.getProductOfHighestPrice(driver);
+       
+       //Update product.txt with product info
+        utilities.writeDataInFile(pathOfProductfile, driver,infoOfProductHavingHighestValue.lastEntry().getValue().get(0),infoOfProductHavingHighestValue.lastKey(),infoOfProductHavingHighestValue.lastEntry().getValue().get(2),infoOfProductHavingHighestValue.lastEntry().getValue().get(1));
+		
 	}
-
+	
+	@AfterClass
+	public void closeWindow() {
+		driver.quit();
+	}
 }
+
+

@@ -20,6 +20,13 @@ public class HomePage extends Base {
 	@FindBy(xpath="//div[@id='maindiv']/div/div/div/div[3]/span[1]")
 	public WebElement priceOfProduct;
 	
+	
+	@FindBy(xpath="//*[@id=\"maindiv\"]/div[4]/div/div[1]/div[2]/a")
+	public WebElement productName;
+	
+	
+	
+	
 	//*[@id='maindiv']//div/a/img
 	
 	

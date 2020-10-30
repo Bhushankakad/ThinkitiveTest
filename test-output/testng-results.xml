@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="20768" started-at="2020-10-25T17:58:47 IST" finished-at="2020-10-25T17:59:07 IST">
+  <suite name="Default suite" duration-ms="21222" started-at="2020-10-30T12:54:28 IST" finished-at="2020-10-30T12:54:49 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="20768" started-at="2020-10-25T17:58:47 IST" finished-at="2020-10-25T17:59:07 IST">
+    <test name="Default test" duration-ms="21222" started-at="2020-10-30T12:54:28 IST" finished-at="2020-10-30T12:54:49 IST">
       <class name="com.thinkitive.ThinkitiveTest.test.TestAssignment2">
-        <test-method status="PASS" signature="openBroser()[pri:0, instance:com.thinkitive.ThinkitiveTest.test.TestAssignment2@71bbf57e]" name="openBroser" is-config="true" duration-ms="11972" started-at="2020-10-25T17:58:47 IST" finished-at="2020-10-25T17:58:59 IST">
+        <test-method status="PASS" signature="openBroser()[pri:0, instance:com.thinkitive.ThinkitiveTest.test.TestAssignment2@71bbf57e]" name="openBroser" is-config="true" duration-ms="11459" started-at="2020-10-30T12:54:28 IST" finished-at="2020-10-30T12:54:40 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBroser -->
-        <test-method status="PASS" signature="test1()[pri:0, instance:com.thinkitive.ThinkitiveTest.test.TestAssignment2@71bbf57e]" name="test1" duration-ms="6844" started-at="2020-10-25T17:58:59 IST" finished-at="2020-10-25T17:59:06 IST">
+        <test-method status="PASS" signature="testWriteProductInfoInTextFile()[pri:0, instance:com.thinkitive.ThinkitiveTest.test.TestAssignment2@71bbf57e]" name="testWriteProductInfoInTextFile" duration-ms="3251" started-at="2020-10-30T12:54:40 IST" finished-at="2020-10-30T12:54:43 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test1 -->
-        <test-method status="PASS" signature="getProductWithHighestPrice()[pri:0, instance:com.thinkitive.ThinkitiveTest.test.TestAssignment2@71bbf57e]" name="getProductWithHighestPrice" duration-ms="1917" started-at="2020-10-25T17:59:06 IST" depends-on-methods="com.thinkitive.ThinkitiveTest.test.TestAssignment2.test1" finished-at="2020-10-25T17:59:07 IST">
+        </test-method> <!-- testWriteProductInfoInTextFile -->
+        <test-method status="PASS" signature="getProductWithHighestPrice()[pri:0, instance:com.thinkitive.ThinkitiveTest.test.TestAssignment2@71bbf57e]" name="getProductWithHighestPrice" duration-ms="6460" started-at="2020-10-30T12:54:43 IST" depends-on-methods="com.thinkitive.ThinkitiveTest.test.TestAssignment2.testWriteProductInfoInTextFile" finished-at="2020-10-30T12:54:49 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getProductWithHighestPrice -->

@@ -6,8 +6,8 @@
       <class name="com.thinkitive.ThinkitiveTest.test.TestAssignment2">
         <methods>
           <include name="getProductWithHighestPrice"/>
+          <include name="testWriteProductInfoInTextFile"/>
           <include name="openBroser"/>
-          <include name="test1"/>
         </methods>
       </class> <!-- com.thinkitive.ThinkitiveTest.test.TestAssignment2 -->
     </classes>
